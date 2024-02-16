@@ -1,24 +1,24 @@
 done_condition: 
 <built-in function any>
 sess: 
-agent: <tensorflow.python.client.session.Session object at 0x7fa006019400>
+agent: <tensorflow.python.client.session.Session object at 0x7fc5407fd4e0>
 
 level_managers: 
-0: <markov.multi_agent_coach.multi_agent_level_manager.MultiAgentLevelManager object at 0x7fa0060690f0>
+0: <markov.multi_agent_coach.multi_agent_level_manager.MultiAgentLevelManager object at 0x7fc5407416a0>
 
 top_level_manager: 
-<markov.multi_agent_coach.multi_agent_level_manager.MultiAgentLevelManager object at 0x7fa0060690f0>
+<markov.multi_agent_coach.multi_agent_level_manager.MultiAgentLevelManager object at 0x7fc5407416a0>
 environments: 
-0: <markov.environments.deepracer_racetrack_env.DeepRacerRacetrackEnv object at 0x7fa006069b38>
+0: <markov.environments.deepracer_racetrack_env.DeepRacerRacetrackEnv object at 0x7fc540741ba8>
 
 heatup_steps: 
-<rl_coach.core_types.EnvironmentSteps object at 0x7fa0069a79e8>
+<rl_coach.core_types.EnvironmentSteps object at 0x7fc540d84908>
 evaluation_steps: 
-<rl_coach.core_types.EnvironmentEpisodes object at 0x7fa0069a79b0>
+<rl_coach.core_types.EnvironmentEpisodes object at 0x7fc540d84748>
 steps_between_evaluation_periods: 
-<rl_coach.core_types.EnvironmentEpisodes object at 0x7fa0069a78d0>
+<rl_coach.core_types.EnvironmentEpisodes object at 0x7fc5416d88d0>
 improve_steps: 
-<rl_coach.core_types.TrainingSteps object at 0x7fa0069a7978>
+<rl_coach.core_types.TrainingSteps object at 0x7fc5416d8a90>
 visualization_parameters: 
 "VisualizationParameters" {
     "add_rendered_image_to_env_response": false,
@@ -93,26 +93,26 @@ False
 num_checkpoints_to_keep: 
 4
 graph_creation_time: 
-1707977243.2426221
+1707986297.6316354
 last_checkpoint_saving_time: 
-1707977242.8493695
+1707986297.2081742
 total_steps_counters: 
-RunPhase.HEATUP: <rl_coach.core_types.TotalStepsCounter object at 0x7fa006956128>
-RunPhase.TRAIN: <rl_coach.core_types.TotalStepsCounter object at 0x7fa006956278>
-RunPhase.TEST: <rl_coach.core_types.TotalStepsCounter object at 0x7fa0069562b0>
+RunPhase.HEATUP: <rl_coach.core_types.TotalStepsCounter object at 0x7fc540db6160>
+RunPhase.TRAIN: <rl_coach.core_types.TotalStepsCounter object at 0x7fc540db6198>
+RunPhase.TEST: <rl_coach.core_types.TotalStepsCounter object at 0x7fc540db61d0>
 
 checkpoint_id: 
 0
 checkpoint_saver: 
-agent: <rl_coach.saver.SaverCollection object at 0x7fa006b7ff98>
+agent: <rl_coach.saver.SaverCollection object at 0x7fc5404aa208>
 
 checkpoint_state_updater: 
 agent: None
 
 graph_logger: 
-<rl_coach.logger.Logger object at 0x7fa0069562e8>
+<rl_coach.logger.Logger object at 0x7fc540db6278>
 data_store: 
-<markov.s3_boto_data_store.S3BotoDataStore object at 0x7fa006069ac8>
+<markov.s3_boto_data_store.S3BotoDataStore object at 0x7fc5404ecd30>
 is_batch_rl: 
 False
 time_metric: 
@@ -225,7 +225,7 @@ env_params:
                             "_session": null,
                             "__class__": "S3Client"
                         },
-                        "_s3_key": "data-50815ffd-b803-46ef-a3d4-5ce94cec185d/models/fcb874cc-b978-4144-aa72-b05f097b9b36/model_metadata.json",
+                        "_s3_key": "data-50815ffd-b803-46ef-a3d4-5ce94cec185d/models/04bf0f73-6781-4385-a727-4131dfcbc3d2/model_metadata.json",
                         "__class__": "ModelMetadata"
                     },
                     "__class__": "TrainingCtrl"
@@ -695,7 +695,7 @@ agents_params:
                     "_session": null,
                     "__class__": "S3Client"
                 },
-                "_s3_key": "data-50815ffd-b803-46ef-a3d4-5ce94cec185d/models/fcb874cc-b978-4144-aa72-b05f097b9b36/model_metadata.json",
+                "_s3_key": "data-50815ffd-b803-46ef-a3d4-5ce94cec185d/models/04bf0f73-6781-4385-a727-4131dfcbc3d2/model_metadata.json",
                 "__class__": "ModelMetadata"
             },
             "__class__": "TrainingCtrl"
@@ -1138,7 +1138,7 @@ agent_params:
                     "_session": null,
                     "__class__": "S3Client"
                 },
-                "_s3_key": "data-50815ffd-b803-46ef-a3d4-5ce94cec185d/models/fcb874cc-b978-4144-aa72-b05f097b9b36/model_metadata.json",
+                "_s3_key": "data-50815ffd-b803-46ef-a3d4-5ce94cec185d/models/04bf0f73-6781-4385-a727-4131dfcbc3d2/model_metadata.json",
                 "__class__": "ModelMetadata"
             },
             "__class__": "TrainingCtrl"
@@ -1475,6 +1475,6 @@ agent_params:
 }
 
 memory_backend_params: 
-<markov.deepracer_memory.DeepRacerRedisPubSubMemoryBackendParameters object at 0x7fa006311a20>
+<markov.deepracer_memory.DeepRacerRedisPubSubMemoryBackendParameters object at 0x7fc5404d5630>
 data_store_params: 
-<markov.s3_boto_data_store.S3BotoDataStoreParameters object at 0x7fa006069a90>
+<markov.s3_boto_data_store.S3BotoDataStoreParameters object at 0x7fc5404eccf8>
