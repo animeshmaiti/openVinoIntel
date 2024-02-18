@@ -1,7 +1,6 @@
 def reward_function(params):
     # Read input variables
     all_wheels_on_track = params['all_wheels_on_track']
-    wp = params['closest_waypoints'][1]
     speed = params['speed']
 
     # Set the speed threshold based your action space
@@ -17,9 +16,5 @@ def reward_function(params):
         # High reward if the car stays on track and goes fast
         reward = 1.0
 
-    if wp in (list(range(59, 82))):
-        if speed >= 2:
-            reward = 1e-3
-    reward += speed
-
     return float(reward)
+            
