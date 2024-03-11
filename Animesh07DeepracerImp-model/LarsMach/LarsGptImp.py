@@ -1,3 +1,4 @@
+import math
 def reward_function(params):
     # Extracting parameters
     all_wheels_on_track = params['all_wheels_on_track']
@@ -7,6 +8,9 @@ def reward_function(params):
     steering_angle = abs(params['steering_angle'])
     progress = params['progress']
     track_width = params['track_width']
+    waypoints = params['waypoints']
+    closest_waypoints = params['closest_waypoints']
+    heading = params['heading']
     steps = params['steps']
     is_offtrack = params['is_offtrack']
     track_length = params['track_length']
@@ -56,6 +60,24 @@ def reward_function(params):
     # Penalty for distance traveled (optional)
     DISTANCE_PENALTY_THRESHOLD = track_length / 2
     if progress < DISTANCE_PENALTY_THRESHOLD:
+        reward *= 0.5
+    
+    next_point = waypoints[closest_waypoints[1]]
+    prev_point = waypoints[closest_waypoints[0]]
+
+    # Calculate the direction in radius, arctan2(dy, dx), the result is (-pi, pi) in radians
+    track_direction = math.atan2(next_point[1] - prev_point[1], next_point[0] - prev_point[0])
+    # Convert to degree
+    track_direction = math.degrees(track_direction)
+
+    # Calculate the difference between the track direction and the heading direction of the car
+    direction_diff = abs(track_direction - heading)
+    if direction_diff > 180:
+        direction_diff = 360 - direction_diff
+
+    # Penalize the reward if the difference is too large
+    DIRECTION_THRESHOLD = 10.0
+    if direction_diff > DIRECTION_THRESHOLD:
         reward *= 0.5
 
     return float(reward)
