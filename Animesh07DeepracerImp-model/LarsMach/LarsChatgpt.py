@@ -1,5 +1,5 @@
 # Training Time = 2hr
-# Time =
+# Time = 68.404 sec
 import math
 
 def reward_function(params):
